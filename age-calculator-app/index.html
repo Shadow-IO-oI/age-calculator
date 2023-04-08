@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>HomePage</title>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<!-- <style>body{opacity: 0;}</style> -->
+	<link rel="stylesheet" href="css/style.min.css?_v=20230407154932">
+	<link rel="shortcut icon" href="favicon.ico">
+	<!-- <meta name="robots" content="noindex, nofollow"> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+	<div class="wrapper">
+		<header class="header">
+			<div class="header__container">
+			</div>
+		</header>
+		<main class="page">
+			<div class="can"><canvas class="confetti" id="canvas"></canvas></div>
+			<section class="page__main-block main-block">
+				<div class="main-block__container">
+					<div class="main-block__body">
+						<form class="main-block__form form">
+							<div class="form__item">
+								<div class="form__title">Day</div>
+								<input autocomplete="off" type="text" name="form[day]" data-error="Must be a vaild day" placeholder="DD" class="day input" oninput="this.value = this.value.replace(/[^0-9]/g, '')" minlength="1" maxlength="2" required>
+								<span class="error day-error"></span>
+							</div>
+							<div class="form__item">
+								<div class="form__title">Month</div>
+								<input autocomplete="off" type="text" name="form[month]" data-error="Must be a vaild month" placeholder="MM" class="month input" oninput="this.value = this.value.replace(/[^0-9]/g, '')" minlength="1" maxlength="2" required>
+								<span class="error month-error"></span>
+							</div>
+							<div class="form__item">
+								<div class="form__title">Year</div>
+								<input autocomplete="off" type="text" name="form[year]" data-error="Must be in the past" placeholder="YYYY" class="year input" oninput="this.value = this.value.replace(/[^0-9]/g, '')" minlength="4" maxlength="4" required>
+								<span class="error year-error"></span>
+							</div>
+							<button type="submit" class="form__button"><img src="img/icon-arrow.svg" alt=""></button>
+						</form>
+						<div class="main-block__bottom bottom">
+							<div class="bottom__items">
+								<div class="bottom__item">
+									<div class="bottom__value year-result">--</div>
+									<div class="bottom__text">years</div>
+								</div>
+								<div class="bottom__item">
+									<div class="bottom__value month-result">--</div>
+									<div class="bottom__text">months</div>
+								</div>
+								<div class="bottom__item">
+									<div class="bottom__value day-result">--</div>
+									<div class="bottom__text">days</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+		<footer class="footer">
+			<div class="footer__container">
+			</div>
+		</footer>
+	</div>
+	<script src="https://cdn.jsdelivr.net/npm/confetti-js?_v=20230407154932"></script>
+	<script src="js/app.min.js?_v=20230407154932"></script>
+</body>
+
+</html>
